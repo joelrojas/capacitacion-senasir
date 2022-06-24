@@ -1,0 +1,9 @@
+### TEST PROJECT
+GET http://localhost:8700/v1/api/project/test
+Accept: application/json
+
+
+
+### TEST ENDPOINT SKYNET
+GET http://localhost:8700/v1/api/project/skynet
+Accept: application/json

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ms-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: service_customer
+          uri: lb://MS-CUSTOMER
+          predicates:
+            - Path=/ms-customer/**
+          filters:
+            - RewritePath=/ms-customer/(?<remaining>.*), /$\{remaining}
+
+server:
+  port: 8282
+
